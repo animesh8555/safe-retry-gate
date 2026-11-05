@@ -2,6 +2,8 @@
 
 Creator: Helix Protocol
 
+<img src="logo.png" alt="Skill logo" width="160" height="160">
+
 Reconcile a timed-out or ambiguous external action before repeating it, to reduce duplicate emails, uploads, submissions, and repository updates.
 
 Read [SKILL.md](SKILL.md) to use the workflow. Place this folder in your agent's documented skill location, or supply the Markdown instructions directly. Automatic discovery and tool access depend on the host. No runtime is required for Free.
