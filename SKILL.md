@@ -1,6 +1,6 @@
 ---
 name: "safe-retry-gate"
-description: "Reconcile a timed-out or ambiguous external action before repeating it, to reduce duplicate emails, uploads, submissions, and repository updates."
+description: "Use when a state-changing action times out, disconnects, or returns an ambiguous result before a retry is considered. Reconcile a timed-out or ambiguous external action before repeating it, to reduce duplicate emails, uploads, submissions, and repository updates."
 ---
 
 # Safe Retry Gate
@@ -8,6 +8,12 @@ description: "Reconcile a timed-out or ambiguous external action before repeatin
 After a timeout, establish whether the action already took effect before retrying.
 
 Use this after an interrupted or unclear tool call that may have changed something. Ordinary read-only lookups usually do not need this workflow. Do not delay a clearly successful action just to produce a ledger.
+
+## When to apply this workflow
+
+Use when a state-changing action times out, disconnects, or returns an ambiguous result before a retry is considered. If the host makes this skill available, use it for matching work without waiting for a tag.
+
+Before proposing or attempting a repeat, report whether the original action is confirmed succeeded, confirmed failed, or outcome unknown, with the evidence or gap. Pause the repeat while the outcome is unknown. Continue authorized work that does not depend on the unresolved result.
 
 ## Decide before repeating
 
